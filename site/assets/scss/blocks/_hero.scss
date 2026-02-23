@@ -1,0 +1,80 @@
+.hero {
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 176px;
+        position: relative;
+    }
+
+    &__content {
+        width: 855px;
+        max-width: 100%;
+        flex: 0 0 855px;
+        text-align: center;
+        padding-bottom: 97px;
+    }
+
+    &__title {
+        font-family: "Neue Machina", sans-serif;
+        font-weight: 700;
+        font-size: 93px;
+        letter-spacing: 0;
+        margin-bottom: 32px;
+    }
+
+    &__description {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 21px;
+        text-align: center;
+        margin: 0 auto 32px;
+        max-width: 690px;
+    }
+
+    &__button {
+        width: 251px;
+        height: 47px;
+        padding: 0 32px;
+        border-radius: 16px;
+        background-color: var(--black);
+        color: #fff;
+        font-family: "Raleway", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #7a00cc;
+        }
+    }
+
+    &__image {
+        flex: 0 0 auto;
+        pointer-events: none;
+        user-select: none;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        &--left {
+            margin-right: 20px;
+        }
+
+        &--right {
+            margin-left: 20px;
+        }
+    }
+}

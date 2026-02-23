@@ -1,31 +1,159 @@
-@import "./fonts.css";
-
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../fonts/PPNeueMachina-Regular.woff2") format("woff2"), url("../fonts/PPNeueMachina-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../fonts/PPNeueMachina-Ultrabold.woff2") format("woff2"), url("../fonts/PPNeueMachina-Ultrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: "Raleway", sans-serif;
-    color: var(--black);
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  color: var(--black);
+  background-color: #fff;
+  line-height: 1.4;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
-    --purple: #9E00FF;
-    --purple-light: #E9C4FF;
-    --purple-soft: #F0D9FF;
-    --purple-bg: #F9EFFF;
-    --accent: #FF004C;
-    --black: #000;
-    --gray: #F2F2F2;
-
-    --transition: 0.15s ease;
+  --purple: #9E00FF;
+  --purple-light: #E9C4FF;
+  --purple-soft: #F0D9FF;
+  --purple-bg: #F9EFFF;
+  --accent: #FF004C;
+  --black: #000;
+  --gray: #F2F2F2;
+  --transition: 0.15s ease;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero {
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.hero__container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 176px;
+  position: relative;
+}
+.hero__content {
+  width: 855px;
+  max-width: 100%;
+  flex: 0 0 855px;
+  text-align: center;
+  padding-bottom: 97px;
+}
+.hero__title {
+  font-family: "Neue Machina", sans-serif;
+  font-weight: 700;
+  font-size: 93px;
+  letter-spacing: 0;
+  margin-bottom: 32px;
+}
+.hero__description {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  text-align: center;
+  margin: 0 auto 32px;
+  max-width: 690px;
+}
+.hero__button {
+  width: 251px;
+  height: 47px;
+  padding: 0 32px;
+  border-radius: 16px;
+  background-color: var(--black);
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+.hero__button:hover {
+  background-color: #7a00cc;
+}
+.hero__image {
+  flex: 0 0 auto;
+  pointer-events: none;
+  user-select: none;
+}
+.hero__image img {
+  width: 100%;
+  height: auto;
+}
+.hero__image--left {
+  margin-right: 20px;
+}
+.hero__image--right {
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+@import "./base/fonts";
+@import "./base/reset";
+@import "./base/variables";
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+@import "./blocks/header";
+@import "./blocks/hero";
+@import "./blocks/quiz";
+@import "./blocks/cards";
+@import "./blocks/footer";
