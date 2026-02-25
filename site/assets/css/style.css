@@ -158,8 +158,40 @@ ul {
 }
 
 .quiz {
-  padding: 120px 0;
+  padding-bottom: 96px;
+  padding-top: 8px;
   background: var(--purple-bg);
+}
+.quiz__reactions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.quiz__reaction {
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 2px solid var(--black);
+  font-family: "Raleway";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  cursor: default;
+}
+.quiz__reaction:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.quiz__reaction-emoji {
+  font-size: 18px;
+  line-height: 1;
+  padding-right: 16px;
 }
 .quiz__form {
   display: flex;
@@ -218,6 +250,7 @@ ul {
   display: none;
   flex-direction: column;
   box-sizing: border-box;
+  box-shadow: 0 -10px 0 var(--purple-light), 0 -20px 0 var(--purple-soft);
 }
 .quiz__card[data-step="2"] {
   height: 588px;

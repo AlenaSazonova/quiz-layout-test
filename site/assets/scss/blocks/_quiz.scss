@@ -1,6 +1,42 @@
 .quiz {
-    padding: 120px 0;
+    padding-bottom: 96px;
+    padding-top: 8px;
     background: var(--purple-bg);
+
+    &__reactions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+
+    &__reaction {
+        padding: 12px 16px;
+        border-radius: 999px;
+        background: var(--white);
+        border: 2px solid var(--black);
+        font-family: "Raleway";
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: var(--transition);
+        cursor: default;
+
+        &:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+    }
+
+    &__reaction-emoji {
+        font-size: 18px;
+        line-height: 1;
+        padding-right: 16px;
+    }
 
     &__form {
         display: flex;
@@ -67,6 +103,10 @@
         display: none;
         flex-direction: column;
         box-sizing: border-box;
+
+        box-shadow:
+            0 -10px 0 var(--purple-light),
+            0 -20px 0 var(--purple-soft);
 
         &[data-step="2"] {
             height: 588px;
