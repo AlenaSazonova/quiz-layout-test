@@ -89,3 +89,29 @@ radios.forEach(radio => {
 });
 
 updateQuiz();
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cardsSlider = new Swiper(".cards__slider", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+
+        watchOverflow: false,
+
+        slidesOffsetBefore: 176, 
+        slidesOffsetAfter: 176,
+
+
+        navigation: {
+            nextEl: ".cards__arrow--next",
+            prevEl: ".cards__arrow--prev",
+        },
+    });
+});
+
+
