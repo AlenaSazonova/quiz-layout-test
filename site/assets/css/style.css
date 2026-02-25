@@ -451,7 +451,7 @@ ul {
 .cards__arrow {
   width: 64px;
   height: 64px;
-  background: #fff;
+  background: var(--white);
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -467,8 +467,8 @@ ul {
   content: "";
   width: 12px;
   height: 12px;
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
+  border-top: 2px solid var(--black);
+  border-right: 2px solid var(--black);
 }
 .cards__arrow--prev::before {
   transform: rotate(-135deg);
@@ -485,7 +485,7 @@ ul {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: #fff;
+  background: var(--white);
 }
 .card__background {
   height: 770px;
@@ -500,12 +500,12 @@ ul {
   left: 8px;
   right: 8px;
   bottom: 8px;
-  background: #fff;
+  background: var(--white);
   border-radius: 32px;
   padding: 58px 16px 24px;
 }
 .card__inner {
-  background: #fff;
+  background: var(--white);
   border-radius: 32px;
   padding-top: 170px;
   padding-right: 8px;
@@ -522,7 +522,7 @@ ul {
   top: -15%;
   left: 50%;
   transform: translateX(-50%);
-  border: 6px solid #fff;
+  border: 6px solid var(--white);
   z-index: 2;
 }
 .card__avatar img {
@@ -569,6 +569,83 @@ ul {
   font-family: "Raleway";
   font-size: 18px;
   line-height: 140%;
+}
+
+.footer {
+  position: relative;
+  background: var(--black);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  padding: 32px 0;
+  color: var(--white);
+  min-height: 253px;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 48px;
+}
+.footer__contacts {
+  display: flex;
+  margin-bottom: 32px;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+}
+.footer__contact:first-child {
+  margin-right: 46px;
+}
+.footer__label {
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  opacity: 0.6;
+  margin-bottom: 16px;
+}
+.footer__value {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  font-family: Neue Machina;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  white-space: nowrap;
+}
+.footer__socials {
+  display: flex;
+  gap: 16px;
+}
+.footer__social {
+  padding: 16px 0px;
+  border-radius: 999px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__social img {
+  min-width: 32px;
+  min-height: 32px;
+  object-fit: contain;
+}
+.footer__social--vk {
+  background: #4d76a1;
+}
+.footer__social--tg {
+  background: #34aadf;
+}
+.footer__brand {
+  font-family: Neue Machina;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  white-space: nowrap;
+  position: absolute;
+  right: 48px;
 }
 
 /*# sourceMappingURL=style.css.map */
