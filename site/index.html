@@ -579,6 +579,98 @@
         </div>
     </footer>
 
+    <div class="quiz-modal" id="quizModal">
+        <div class="quiz-overlay"></div>
+    
+        <div class="quiz-box">
+            <button class="modal-close">
+                <span></span>
+            </button>
+    
+            <h1 class="quiz-title">
+                Заполните контактные<br>данные
+            </h1>
+    
+            <p class="quiz-subtitle">
+                Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!
+            </p>
+    
+            <form id="quizForm">
+    
+                <div class="row row-names">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="text" placeholder="Фамилия">
+                </div>
+    
+                <div class="comment-section">
+                
+                    <div class="comment-header">
+                        
+                        <div class="comment-field">
+                            <textarea id="commentField" placeholder="Ваш комментарий"></textarea>
+                            <div class="comment-line"></div>
+                        </div>
+                
+                        <div class="comment-actions">
+                            <label class="file-btn">
+                                <span>Приложить файлы</span>
+                                <input type="file" hidden multiple>
+                                <div class="clip-icon"></div>
+                            </label>
+                
+                            <div class="error-icon-wrapper">
+                                <div class="error-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                                
+                    <div class="error-text">
+                        Это обязательное поле
+                    </div>
+                
+                </div>
+    
+                <p class="quiz-text">
+                    Этот квиз предназначен для тех людей, которые любят проходить тесты!
+                </p>
+
+                <div class="radio-grid">
+                    <label class="radio-item"><input type="radio" name="q">Не знаю</label>
+                    <label class="radio-item"><input type="radio" name="q">Увидел это</label>
+                    <label class="radio-item"><input type="radio" name="q">Вон то</label>
+                    <label class="radio-item"><input type="radio" name="q">Вон то</label>
+                    <label class="radio-item"><input type="radio" name="q">Увидел это</label>
+                    <label class="radio-item"><input type="radio" name="q">Не знаю</label>
+                </div>
+    
+                <button type="submit" class="quiz-button">
+                    Продолжить
+                </button>
+    
+            </form>
+        </div>
+    </div>
+    
+    
+    <div class="success-modal" id="successModal">
+        <div class="quiz-overlay"></div>
+    
+        <div class="success-box">
+            <button class="modal-close">
+                <span></span>
+            </button>
+
+            <div class="emoji">😉</div>
+    
+            <h2 class="success-box-title">Ваши данные<br>Отправлены</h2>
+    
+            <p class="success-box-subtitle">
+                Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!
+            </p>
+    
+            <button class="success-btn">Вернуться на сайт</button>
+        </div>
+    </div>
 
     <div style="display: none;">
     

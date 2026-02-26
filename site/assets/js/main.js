@@ -146,3 +146,97 @@ menuItems.forEach(item => {
         item.classList.add("header__item--active");
     });
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const quizModal = document.getElementById("quizModal");
+    const successModal = document.getElementById("successModal");
+
+    const form = document.getElementById("quizForm");
+    const comment = document.getElementById("commentField");
+    const commentSection = document.querySelector(".comment-section");
+
+    const openBtn = document.querySelector(".header__button");
+    const backBtn = document.querySelector(".success-btn");
+
+    const quizClose = quizModal.querySelector(".modal-close");
+    const successClose = successModal.querySelector(".modal-close");
+
+    const quizOverlay = quizModal.querySelector(".quiz-overlay");
+    const successOverlay = successModal.querySelector(".quiz-overlay");
+
+
+    if (openBtn) {
+        openBtn.addEventListener("click", function () {
+            quizModal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+    }
+
+
+    function closeQuiz() {
+        form.reset();
+        commentSection.classList.remove("error");
+        quizModal.classList.remove("active");
+        document.body.style.overflow = "";
+
+        form.reset();
+        commentSection.classList.remove("error");
+    }
+
+
+    function closeSuccess() {
+        form.reset();
+        commentSection.classList.remove("error");
+        successModal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+
+    if (quizClose) quizClose.addEventListener("click", closeQuiz);
+    if (quizOverlay) quizOverlay.addEventListener("click", closeQuiz);
+
+    if (successClose) successClose.addEventListener("click", closeSuccess);
+    if (successOverlay) successOverlay.addEventListener("click", closeSuccess);
+
+
+    if (comment) {
+        comment.addEventListener("input", function () {
+            if (comment.value.trim() !== "") {
+                commentSection.classList.remove("error");
+            }
+        });
+    }
+
+
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            if (!comment.value.trim()) {
+                commentSection.classList.add("error");
+                return;
+            }
+
+            commentSection.classList.remove("error");
+
+            quizModal.classList.remove("active");
+            successModal.classList.add("active");
+        });
+    }
+
+
+    if (backBtn) {
+        backBtn.addEventListener("click", closeSuccess);
+    }
+
+});
+
+
+
+
+
