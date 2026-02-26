@@ -115,3 +115,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
+
+const nonMainItem = document.getElementById("non-main-item");
+const mainBtn = nonMainItem.querySelector(".main-btn");
+const dropdown = nonMainItem.querySelector(".header__dropdown");
+const dropdownButtons = dropdown.querySelectorAll(".header__dropdown-item");
+
+mainBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+    nonMainItem.classList.toggle("header__item--active-dropdown");
+});
+
+dropdownButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        dropdownButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+    });
+});
+
+
+const menuItems = document.querySelectorAll(".header__item");
+
+menuItems.forEach(item => {
+    item.addEventListener("click", (e) => {
+        e.preventDefault();
+        menuItems.forEach(i => i.classList.remove("header__item--active"));
+        item.classList.add("header__item--active");
+    });
+});
