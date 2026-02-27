@@ -88,3 +88,46 @@
         right: 48px;
     }
 }
+
+@media (max-width: 320px) {
+    .footer {
+        padding: 24px 16px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    .footer__brand {
+        position: static;
+        order: -1;
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .footer__contacts {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .footer__contact:first-child {
+        margin-right: 0;
+    }
+
+    .footer__value {
+        font-size: 24px;
+    }
+
+    .footer__socials {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .footer__social {
+        flex: 1;
+        height: 56px;
+    }
+}

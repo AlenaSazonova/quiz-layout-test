@@ -7,16 +7,16 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        gap: 176px;
         position: relative;
+        padding: 0;
+        margin: 0 auto;
     }
 
     &__content {
-        width: 855px;
-        max-width: 100%;
-        flex: 0 0 855px;
         text-align: center;
         padding-bottom: 97px;
+        position: relative;
+        z-index: 100;
     }
 
     &__title {
@@ -25,6 +25,7 @@
         font-size: 93px;
         letter-spacing: 0;
         margin-bottom: 32px;
+        white-space: nowrap;
     }
 
     &__description {
@@ -42,7 +43,7 @@
         padding: 0 32px;
         border-radius: 16px;
         background-color: var(--black);
-        color: #fff;
+        color: var(--white);
         font-family: "Raleway", sans-serif;
         font-size: 20px;
         font-weight: 500;
@@ -60,21 +61,127 @@
     }
 
     &__image {
-        flex: 0 0 auto;
         pointer-events: none;
         user-select: none;
 
-        img {
+        position: absolute;
+            bottom: 0;
+            z-index: 1;
+
+            img {
+                display: block;
+                height: auto;
+            }
+
+            &--left {
+                left: 0;
+            }
+
+            &--right {
+                right: 0;
+            }
+    }
+
+    &__content {
+            position: relative;
+            z-index: 2;
+        }
+}
+
+@media (max-width: 320px) {
+    .hero {
+        background-color: var(--white);
+        padding-top: 32px;
+        padding-bottom: 0;
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 16px;
+            position: relative;
+        }
+
+        &__content {
+            padding-bottom: 0px;
+            text-align: left;
             width: 100%;
-            height: auto;
         }
 
-        &--left {
-            margin-right: 20px;
+        &__title {
+            font-family: "Neue Machina", sans-serif;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 100%;
+            margin-bottom: 24px;
+            white-space: normal;
         }
 
-        &--right {
-            margin-left: 20px;
+        &__description {
+            font-family: "Raleway", sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            margin-bottom: 24px;
+            text-align: left;
+            max-width: 100%;
         }
+
+        &__button {
+            width: 213px;
+            height: 35px;
+            border-radius: 8px;
+            padding: 8px 32px;
+            font-family: "Raleway", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 127px;
+        }
+
+        &__image {
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            &--left {
+                width: 107px;
+                height: 90px;
+                bottom: 0;
+                left: 0;
+            }
+
+            &--right {
+                width: 160px;
+                height: 147px;
+                bottom: 0px;
+                right: 0;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .hero {
+        position: relative;
+    }
+
+    .hero__image {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .hero__image--left {
+        left: calc((100vw - 1440px) / 2 * -1);
+    }
+
+    .hero__image--right {
+        right: calc((100vw - 1440px) / 2 * -1);
     }
 }

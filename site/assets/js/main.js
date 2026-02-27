@@ -96,7 +96,7 @@ updateQuiz();
 
 document.addEventListener("DOMContentLoaded", function () {
     const cardsSlider = new Swiper(".cards__slider", {
-        slidesPerView: 3,
+        slidesPerView: 2.9,
         spaceBetween: 10,
         centeredSlides: true,
         loop: true,
@@ -240,3 +240,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelector('.header__burger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    let scrollPosition = 0;
+
+    burger.addEventListener('click', () => {
+
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+
+        if (mobileMenu.classList.contains('active')) {
+            scrollPosition = window.scrollY;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;
+            document.body.style.width = '100%';
+        } else {
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollPosition);
+        }
+    });
+});

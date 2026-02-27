@@ -6,10 +6,10 @@
 
     &__container {
         max-width: 1440px;
-        margin: 0 0 0 510px;
         position: relative;
         overflow: visible;
         padding-left: 0;
+        margin-left: 20px;
     }
 
     &__slider {
@@ -173,5 +173,50 @@
         font-family: "Raleway";
         font-size: 18px;
         line-height: 140%;
+    }
+}
+
+@media (max-width: 320px) {
+    .cards {
+        padding-right: 20px;
+        padding-bottom: 48px;
+    }
+    .cards__navigation {
+        display: none;
+    }
+
+    .cards__wrapper {
+        transform: none !important;
+    }
+
+    .cards__slider {
+        overflow: visible;
+    }
+
+    .cards__slide {
+        display: none !important;
+    }
+
+    .cards__slide:nth-child(4) {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .card {
+        width: 100%;
+        height: 522px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .cards {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards__container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
     }
 }
